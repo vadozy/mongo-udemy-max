@@ -1,0 +1,20 @@
+version: '3.8'
+
+# START
+# docker-compose up -d
+#
+# SHUTDOWN
+# docker-compose down
+
+services:
+  mongodb:
+    image: mongo:5.0.6-focal
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data-db:/data/db
+      - mongo-data-configdb:/data/configdb
+
+volumes:
+  mongo-data-db:
+  mongo-data-configdb:
