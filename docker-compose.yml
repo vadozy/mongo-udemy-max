@@ -9,6 +9,8 @@ version: '3.8'
 services:
   mongodb:
     image: mongo:5.0.6-focal
+    ### Next line starts mongo with authentication
+    # command: --auth
     ports:
       - '27017:27017'
     volumes:
